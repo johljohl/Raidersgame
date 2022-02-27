@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url("img/indy.png");
+    background-repeat: no-repeat;
+}
+#game{
+    width: 316px;
+    height: 548px;
+    border: 1px solid black;
+    border-radius: 5px;
+    border-color: black;
+    margin-left: 21px;
+    margin-top: 175px;
+    box-sizing: border-box;
+}
+#character{
+    width: 100px;
+    height: 150px;
+    background-image: url("img/indy2.gif");
+    background-repeat: no-repeat;
+    position: relative;
+    top: 300px;
+    left: 0px;
+}
+
+#block{
+    width: 100px;
+    height: 105px;
+    top: 438px;
+    background-color: black;
+    position: relative;
+    animation: slide 5s infinite linear;
+    
+}
+@keyframes slide{
+    0%{top:-0px};
+    100%{top:440px};
+}
+#left, #right{
+    width:50%;
+    position: absolute;
+    height: 500px;
+}
+#right{
+    left: 50%;
+}
