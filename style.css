@@ -30,9 +30,11 @@ body {
     width: 100px;
     height: 105px;
     top: 438px;
-    background-color: black;
+    background-image: url("img/rock.webp");
+    object-fit: scale-down;
+    background-repeat: no-repeat;
     position: relative;
-    animation: slide 5s infinite linear;
+    animation: slide 3s infinite linear;
     
 }
 @keyframes slide{
