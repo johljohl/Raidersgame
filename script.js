@@ -1,6 +1,9 @@
+let mySound = new Audio ('sound/indy.mp3')
+
 document.addEventListener("keydown", event => {
   if(event.key==="ArrowLeft"){moveLeft();}
-  if(event.key==="ArrowRight"){moveRight();}
+  if(event.key==="ArrowRight"){moveRight();
+}
 });
 var character = document.getElementById("character");
 function moveLeft(){
@@ -21,7 +24,7 @@ var block = document.getElementById("block");
 var counter = 0;
 block.addEventListener('animationiteration', () => {
     var random = Math.floor(Math.random() * 3);
-    left = random * 100;
+    left = random * 100; mySound.play();
     block.style.left = left + "px";
     counter++;
 });
