@@ -1,4 +1,5 @@
 let mySound = new Audio ('sound/indy.mp3')
+const counter = document.getElementById("counter");
 
 document.addEventListener("keydown", event => {
   if(event.key==="ArrowLeft"){moveLeft();}
@@ -21,7 +22,7 @@ function moveRight(){
     }
 }
 var block = document.getElementById("block");
-var counter = 0;
+
 block.addEventListener('animationiteration', () => {
     var random = Math.floor(Math.random() * 3);
     left = random * 100; mySound.play();
@@ -29,12 +30,13 @@ block.addEventListener('animationiteration', () => {
     counter++;
 });
 setInterval(function(){
+    counter.innerText++;
     var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
     var blockTop = parseInt(window.getComputedStyle(block).getPropertyValue("top"));
     if(characterLeft==blockLeft && blockTop<500 && blockTop>300){
-        alert("Game over. Score: " + counter);
-        block.style.animation = "none";
+        alert("Game over. Score: " + counter.innerText++);
+        block.style.animation = "none"; location.reload(); 
     }
 },1);
 

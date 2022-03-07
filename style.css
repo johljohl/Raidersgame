@@ -6,6 +6,19 @@ body {
     background-image: url("img/indy.png");
     background-repeat: no-repeat;
 }
+#counter { 
+    box-sizing: border-box;
+    width: 100px;
+    background-color: white;
+    margin-top: 139px;
+    margin-left: 215px;
+    text-align: right;
+    border-radius: 5px;
+    border: 3px solid;
+    border-color: darkorange;
+
+
+}
 #game{
     width: 316px;
     height: 548px;
@@ -16,7 +29,7 @@ body {
     border-radius: 5px;
     border-color: black;
     margin-left: 21px;
-    margin-top: 175px;
+    margin-top: 12px;
     box-sizing: border-box;
     animation: temple 0.5s linear infinite;
 }
@@ -38,7 +51,7 @@ body {
     object-fit: scale-down;
     background-repeat: no-repeat;
     position: relative;
-    animation: slide 2s infinite linear;
+    animation: slide 1s infinite linear;
     
 }
 @keyframes slide{
