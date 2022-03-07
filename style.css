@@ -10,11 +10,15 @@ body {
     width: 316px;
     height: 548px;
     border: 1px solid black;
+    background-image: url(img/stone.jpg);
+    background-size: cover;
+    overflow: hidden;
     border-radius: 5px;
     border-color: black;
     margin-left: 21px;
     margin-top: 175px;
     box-sizing: border-box;
+    animation: temple 0.5s linear infinite;
 }
 #character{
     width: 100px;
@@ -49,3 +53,10 @@ body {
 #right{
     left: 50%;
 }
+@keyframes temple {
+    from{
+        background-position: 50% 300px;
+    }
+    to{background-position: 50% -30px;
+    }
+     }
