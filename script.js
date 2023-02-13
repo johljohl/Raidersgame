@@ -3,6 +3,8 @@ const counter = document.getElementById("counter");
 
 var gameOver = false;
 
+var level = 1;
+
 var gameOverScreen = document.createElement("div");
 gameOverScreen.style.display = "none";
 gameOverScreen.style.position = "fixed";
@@ -74,10 +76,24 @@ setInterval(function () {
     mySound.pause();
     gameOver = true;
   }
-  if (counter.innerText >= 500 && level == 1) {
+  if (counter.innerText >= 2000 && level == 1) {
     level = 2;
     gameOver = false;
-    block.style.animation = "move 1s linear infinite";
+    block.style.animation = "slide 0.8s linear infinite";
+    counter.innerText = 0;
+    gameOverScreen.style.display = "none";
+  }
+  if (counter.innerText >= 4000 && level == 2) {
+    level = 3;
+    gameOver = false;
+    block.style.animation = "slide 0.5s linear infinite";
+
+    gameOverScreen.style.display = "none";
+  }
+  if (counter.innerText >= 6000 && level == 3) {
+    level = 4;
+    gameOver = false;
+    block.style.animation = "slide 0.3s linear infinite";
     counter.innerText = 0;
     gameOverScreen.style.display = "none";
   }

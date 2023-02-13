@@ -1,75 +1,78 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 body {
-    background-image: url("img/indy.png");
-    background-repeat: no-repeat;
+  background-image: url("img/indy.png");
+  background-repeat: no-repeat;
 }
-#counter { 
-    box-sizing: border-box;
-    width: 100px;
-    background-color: white;
-    margin-top: 139px;
-    margin-left: 215px;
-    text-align: right;
-    border-radius: 5px;
-    border: 3px solid;
-    border-color: darkorange;
-
-
+#counter {
+  box-sizing: border-box;
+  width: 100px;
+  background-color: white;
+  margin-top: 139px;
+  margin-left: 215px;
+  text-align: right;
+  border-radius: 5px;
+  border: 3px solid;
+  border-color: darkorange;
 }
-#game{
-    width: 316px;
-    height: 548px;
-    border: 1px solid black;
-    background-image: url(img/stone.jpg);
-    background-size: cover;
-    overflow: hidden;
-    border-radius: 5px;
-    border-color: black;
-    margin-left: 21px;
-    margin-top: 12px;
-    box-sizing: border-box;
-    animation: temple 0.5s linear infinite;
+#game {
+  width: 316px;
+  height: 548px;
+  border: 1px solid black;
+  background-image: url(img/stone.jpg);
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 5px;
+  border-color: black;
+  margin-left: 21px;
+  margin-top: 12px;
+  box-sizing: border-box;
+  animation: temple 0.5s linear infinite;
 }
-#character{
-    width: 100px;
-    height: 150px;
-    background-image: url("img/indy2.gif");
-    background-repeat: no-repeat;
-    position: relative;
-    top: 300px;
-    left: 0px;
+#character {
+  width: 100px;
+  height: 150px;
+  background-image: url("img/indy2.gif");
+  background-repeat: no-repeat;
+  position: relative;
+  top: 300px;
+  left: 0px;
 }
 
-#block{
-    width: 100px;
-    height: 105px;
-    top: 438px;
-    background-image: url("img/rock.webp");
-    object-fit: scale-down;
-    background-repeat: no-repeat;
-    position: relative;
-    animation: slide 1s infinite linear;
-    
+#block {
+  width: 100px;
+  height: 105px;
+  top: 438px;
+  background-image: url("img/rock.webp");
+  object-fit: scale-down;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: slide 2s infinite linear;
 }
-@keyframes slide{
-    0%{top:-0px};
-    100%{top:440px};
+@keyframes slide {
+  0% {
+    top: -0px;
+  }
+  100% {
+    top: 440px;
+  }
 }
-#left, #right{
-    width:50%;
-    position: absolute;
-    height: 500px;
+#left,
+#right {
+  width: 50%;
+  position: absolute;
+  height: 500px;
 }
-#right{
-    left: 50%;
+#right {
+  left: 50%;
 }
 @keyframes temple {
-    from{
-        background-position: 50% 300px;
-    }
-    to{background-position: 50% -30px;
-    }
-     }
+  from {
+    background-position: 50% 300px;
+  }
+  to {
+    background-position: 50% -30px;
+  }
+}
